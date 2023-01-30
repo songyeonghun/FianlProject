@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerControl : MonoBehaviour
 {
     private bool canDash = true;
     private bool isDashing;
     private float move = 0.01f;
-    private int HP = 100;
+    public int HP = 100;
 
     public float moveSpeed;
     public float dashSpeed;
@@ -21,6 +22,7 @@ public class PlayerControl : MonoBehaviour
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+
     }
 
     void Update()
@@ -63,6 +65,14 @@ public class PlayerControl : MonoBehaviour
             HP--;
             Instantiate(bullet, bulletpos.position, transform.rotation);
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "bullet")
+        {
+            HP++;
+        }    
     }
 
     //¥ÎΩ¨ µÙ∑π¿Ã

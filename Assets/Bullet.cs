@@ -24,6 +24,11 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if(collision.gameObject.tag=="Player")
+        {
+            Destroy(gameObject);
+        }
+
         Vector2 _wallNormal = collision.contacts[0].normal;
         dir = Vector2.Reflect(rb.velocity, _wallNormal).normalized;
 
