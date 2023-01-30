@@ -326,6 +326,10 @@ PrefabInstance:
       propertyPath: HPbar
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7596574456694257177, guid: 36e042325ae0dce439b0f9342dafb2e1, type: 3}
+      propertyPath: dashCoolTime
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7596574456694257178, guid: 36e042325ae0dce439b0f9342dafb2e1, type: 3}
       propertyPath: m_RootOrder
       value: 6

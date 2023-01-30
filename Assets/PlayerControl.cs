@@ -8,8 +8,8 @@ public class PlayerControl : MonoBehaviour
     private bool canDash = true;
     private bool isDashing;
     private float move = 0.01f;
-    public int HP = 100;
 
+    public int HP = 100;
     public float moveSpeed;
     public float dashSpeed;
     public float dashTime = 0.2f;
