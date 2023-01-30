@@ -7,6 +7,7 @@ public class PlayerControl : MonoBehaviour
     private bool canDash = true;
     private bool isDashing;
     private float move = 0.01f;
+    private int HP = 100;
 
     public float moveSpeed;
     public float dashSpeed;
@@ -59,6 +60,7 @@ public class PlayerControl : MonoBehaviour
         //ÃÑ¹ß»ç (ÁÂÅ¬¸¯)
         if (Input.GetMouseButtonDown(0))
         {
+            HP--;
             Instantiate(bullet, bulletpos.position, transform.rotation);
         }
     }
