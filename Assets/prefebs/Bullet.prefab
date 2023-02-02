@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1470354699072409285}
   - component: {fileID: 1470354699072409307}
   - component: {fileID: -3074217435245606096}
-  - component: {fileID: 5423087647727069814}
-  m_Layer: 0
+  - component: {fileID: -7897732479620250189}
+  m_Layer: 6
   m_Name: Bullet
   m_TagString: bullet
   m_Icon: {fileID: 0}
@@ -117,8 +117,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!58 &5423087647727069814
+  m_Constraints: 4
+--- !u!58 &-7897732479620250189
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -15,6 +15,8 @@ public class PlayerControl : MonoBehaviour
     public float dashTime = 0.2f;
     public float dashCoolTime = 0.5f;
 
+    static public Vector2 len;
+
     public GameObject bullet;
     public Transform bulletpos;
 
@@ -46,7 +48,7 @@ public class PlayerControl : MonoBehaviour
         }
 
         //플레이어 방향 회전
-        Vector2 len = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        len = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         float z = Mathf.Atan2(len.y, len.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, z);
 
