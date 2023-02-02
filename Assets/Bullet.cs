@@ -16,9 +16,8 @@ public class Bullet : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         //플레이어가 보는 방향으로 총알 발사
-        move = PlayerControl.len;
+        move= PlayerControl.len;
         rb.velocity = move;
-
     }
 
     void Update()
@@ -40,7 +39,7 @@ public class Bullet : MonoBehaviour
             var speed = LastVelocity.magnitude;
             var direction = Vector3.Reflect(LastVelocity.normalized, collision.contacts[0].normal);
 
-            rb.velocity = direction * Mathf.Max(speed, 0f);
+            rb.velocity = direction * Mathf.Max(speed, 10f);
         }
     }
 
