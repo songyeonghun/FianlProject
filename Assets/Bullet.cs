@@ -7,6 +7,8 @@ public class Bullet : MonoBehaviour
     Rigidbody2D rb;
     Vector3 LastVelocity;
     Vector2 move;
+
+
     void Start()
     {
         //테스트 용: 10초뒤 사라지게함
@@ -22,7 +24,8 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
-        LastVelocity = rb.velocity;
+
+            LastVelocity = rb.velocity;
     }
 
     //총알 접촉시

@@ -14,6 +14,7 @@ public class PlayerControl : MonoBehaviour
     public float dashSpeed;
     public float dashTime = 0.2f;
     public float dashCoolTime = 0.5f;
+    public bool atkCoolTime = false;
 
     static public Vector2 len;
 
@@ -21,6 +22,7 @@ public class PlayerControl : MonoBehaviour
     public Transform bulletpos;
 
     private Rigidbody2D rb;
+
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
@@ -62,15 +64,21 @@ public class PlayerControl : MonoBehaviour
         }
 
         //ÃÑ¹ß»ç (ÁÂÅ¬¸¯)
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
-            HP--;
-            Instantiate(bullet, bulletpos.position, transform.rotation);
+            if (atkCoolTime == false)
+            {
+                HP--;
+                Instantiate(bullet, bulletpos.position, transform.rotation);
+                atkCoolTime = true;
+                StartCoroutine("atkCool");
+            }
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //ÃÑ¾Ë È¸¼ö½Ã È¸º¹
         if (collision.gameObject.tag == "bullet")
         {
             HP++;
@@ -87,5 +95,9 @@ public class PlayerControl : MonoBehaviour
         yield return new WaitForSeconds(dashCoolTime);
         canDash = true;
     }
-
+    private IEnumerator atkCool()
+    {
+        yield return new WaitForSeconds(0.5f);
+        atkCoolTime = false;
+    }
 }
