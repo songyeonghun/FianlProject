@@ -60,6 +60,8 @@
     <Compile Include="Assets\PlayerControl.cs" />
     <Compile Include="Assets\CameraMove.cs" />
     <Compile Include="Assets\Player2Controler.cs" />
+    <Compile Include="Assets\Shooting.cs" />
+    <Compile Include="Assets\Bulllet2.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
