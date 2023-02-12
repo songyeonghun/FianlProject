@@ -9,7 +9,8 @@ public class PlayerControl : MonoBehaviour
     private bool isDashing;
     private float move = 0.01f;
 
-    public int HP = 100;
+    public float maxHP = 100;
+    public float HP;
     public float moveSpeed;
     public float dashSpeed;
     public float dashTime = 0.2f;
@@ -20,6 +21,7 @@ public class PlayerControl : MonoBehaviour
 
     public GameObject bullet;
     public Transform bulletpos;
+    public Slider hpBar;
 
     private Rigidbody2D rb;
 
@@ -27,6 +29,7 @@ public class PlayerControl : MonoBehaviour
     {
         rb = this.GetComponent<Rigidbody2D>();
 
+        HP = maxHP;
     }
 
     void Update()
@@ -74,6 +77,9 @@ public class PlayerControl : MonoBehaviour
                 StartCoroutine("atkCool");
             }
         }
+
+        //Ã¼·Â¹Ù
+        hpBar.value = HP / maxHP;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
