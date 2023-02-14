@@ -51,7 +51,7 @@ public class PlayerControler : MonoBehaviour
         }
 
         //Ã¼·Â¹Ù
-        //hpBar.value = HP / maxHP;
+        hpBar.value = HP / maxHP;
     }
     void FixedUpdate()
     {
