@@ -9,9 +9,12 @@ public class Shooting : MonoBehaviour
 
     public float bulletForce = 20f;
 
+    bool atkCool=false;
+    float atkCooltime = 0.5f;
+
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0) && atkCool == false)
         {
             Shoot();
         }
@@ -22,5 +25,15 @@ public class Shooting : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, firepoint.position, firepoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firepoint.right * bulletForce, ForceMode2D.Impulse);
+
+        atkCool = true;
+        StartCoroutine("atkCoolTime");
     }
+
+    private IEnumerator atkCoolTime()
+    {
+        yield return new WaitForSeconds(atkCooltime);
+        atkCool = false;
+    }
+
 }
