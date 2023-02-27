@@ -6,17 +6,16 @@ using UnityEngine.UI;
 public class PlayerHP : MonoBehaviour
 {
     public Slider hpbar;
-    public static int StatHp;
+    public static int StatHp=100;
     public float maxHp;
     public float currentHp;
 
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         hpbar.value = currentHp / maxHp;

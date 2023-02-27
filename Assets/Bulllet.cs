@@ -4,34 +4,25 @@ using UnityEngine;
 
 public class Bulllet : MonoBehaviour
 {
-
     Rigidbody2D rb;
     Vector3 LastVelocity;
-    Vector2 player;
+    Vector2 move;
+
 
     private void Start()
     {
-        rb.velocity = player;
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        rb.velocity = transform.right * 20;
     }
 
     void Update()
     {
-        LastVelocity = rb.velocity;
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            var speed = LastVelocity.magnitude;
-            var direction = Vector3.Reflect(LastVelocity.normalized, collision.contacts[0].normal);
-
-            rb.velocity = direction * Mathf.Max(speed, 10f);
-        }
+        Destroy(gameObject);
     }
 
 }

@@ -28,6 +28,11 @@ public class Shooting : MonoBehaviour
 
         atkCool = true;
         StartCoroutine("atkCoolTime");
+
+        //저장 테스트
+        PlayerHP.StatHp++;
+        Debug.Log(PlayerHP.StatHp);
+        GameManager.GameSave();
     }
 
     private IEnumerator atkCoolTime()

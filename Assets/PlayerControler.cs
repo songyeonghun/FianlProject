@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class PlayerControler : MonoBehaviour
 {
+    SpriteRenderer spriteRenderer;
+    Animator anim;
+    float flip;
+
     private bool canDash = true;
     private bool isDashing;
     private float move = 0.01f;
@@ -15,7 +19,6 @@ public class PlayerControler : MonoBehaviour
     public float dashSpeed;
     public float dashTime = 0.2f;
     public float dashCoolTime = 0.5f;
-    public bool atkCoolTime = false;
 
     static public Vector2 len;
 
@@ -27,6 +30,12 @@ public class PlayerControler : MonoBehaviour
     Vector2 movement;
     Vector2 mousepos;
 
+
+    private void Awake()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        anim=GetComponent<Animator>();
+    }
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
@@ -41,13 +50,9 @@ public class PlayerControler : MonoBehaviour
 
        mousepos = cam.ScreenToWorldPoint(Input.mousePosition);
 
-        //총발사 (좌클릭)
-        if (Input.GetMouseButton(0))
+        if (Input.GetKey(KeyCode.A))
         {
-            if (atkCoolTime == false)
-            {
-                HP--;
-            }
+            anim.SetBool("move", true);
         }
 
         //체력바
@@ -63,11 +68,7 @@ public class PlayerControler : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //총알 회수시 회복
-        if (collision.gameObject.tag == "bullet")
-        {
-            HP++;
-        }
+
     }
 
     //대쉬 딜레이
