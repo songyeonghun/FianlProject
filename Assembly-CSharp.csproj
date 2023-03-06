@@ -58,15 +58,15 @@
   <ItemGroup>
     <Compile Include="Assets\MapGenerator.cs" />
     <Compile Include="Assets\Shooting.cs" />
+    <Compile Include="Assets\deletBtn.cs" />
     <Compile Include="Assets\prefebs\X\testBullet.cs" />
     <Compile Include="Assets\prefebs\X\testPlayerControl.cs" />
     <Compile Include="Assets\Bulllet.cs" />
+    <Compile Include="Assets\GameManager.cs" />
     <Compile Include="Assets\PlayerHP.cs" />
     <Compile Include="Assets\CameraMove.cs" />
-    <Compile Include="Assets\PlayerCollider.cs" />
     <Compile Include="Assets\PlayerControler.cs" />
-    <Compile Include="Assets\GameManager.cs" />
-    <Compile Include="Assets\deletBtn.cs" />
+    <Compile Include="Assets\Script\SaveLoad\SaveBtn.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
