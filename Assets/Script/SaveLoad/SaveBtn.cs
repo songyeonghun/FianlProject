@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class SaveBtn : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        PlayerHP.StatHp = PlayerPrefs.GetInt("StatHP");
     }
 }
