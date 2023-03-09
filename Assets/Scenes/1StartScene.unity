@@ -214,6 +214,7 @@ GameObject:
   - component: {fileID: 264511484}
   - component: {fileID: 264511483}
   - component: {fileID: 264511482}
+  - component: {fileID: 264511485}
   m_Layer: 5
   m_Name: StartBtn
   m_TagString: Untagged
@@ -284,7 +285,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 264511483}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 264511485}
+        m_TargetAssemblyTypeName: StartBtn, Assembly-CSharp
+        m_MethodName: click
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &264511483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,6 +336,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 264511480}
   m_CullTransparentMesh: 1
+--- !u!114 &264511485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264511480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0becad83ae675464da2bc2c8760a921a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &563432248
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,6 +518,7 @@ GameObject:
   - component: {fileID: 884410338}
   - component: {fileID: 884410337}
   - component: {fileID: 884410336}
+  - component: {fileID: 884410339}
   m_Layer: 5
   m_Name: ExitBtn
   m_TagString: Untagged
@@ -563,7 +589,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 884410337}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 884410339}
+        m_TargetAssemblyTypeName: deletBtn, Assembly-CSharp
+        m_MethodName: delete
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &884410337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -602,6 +640,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 884410334}
   m_CullTransparentMesh: 1
+--- !u!114 &884410339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884410334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b956628a9817de646a72d7a50d37a1ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1251115414
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,6 +1114,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1819598152}
   m_CullTransparentMesh: 1
+--- !u!1 &2079480071
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2079480073}
+  - component: {fileID: 2079480072}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2079480072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079480071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3451ed02e7e4fc04cbc43266b1336db4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &2079480073
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079480071}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 938.92365, y: 584.65784, z: -42.3951}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2109589946
 GameObject:
   m_ObjectHideFlags: 0
