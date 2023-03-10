@@ -66,9 +66,9 @@
     <Compile Include="Assets\GameManager.cs" />
     <Compile Include="Assets\PlayerHP.cs" />
     <Compile Include="Assets\CameraMove.cs" />
+    <Compile Include="Assets\StartBtn.cs" />
     <Compile Include="Assets\PlayerState.cs" />
     <Compile Include="Assets\PlayerControler.cs" />
-    <Compile Include="Assets\StartBtn.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

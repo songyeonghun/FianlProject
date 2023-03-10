@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class PlayerState : MonoBehaviour
 {
     static public int statHp;
@@ -10,6 +10,8 @@ public class PlayerState : MonoBehaviour
     static public int statAtkSpeed;
     static public int statHpUse;
     static public float StatHpRegen;
+
+    public Text HPText;
 
     //Ω∫≈»«•
     public int[][] stat = new int[6][]
@@ -30,12 +32,17 @@ public class PlayerState : MonoBehaviour
         statAtkSpeed = PlayerPrefs.GetInt("statAtkSpeed");
         StatHpRegen = PlayerPrefs.GetInt("StatHpRegen");
         statHpUse = PlayerPrefs.GetInt("statHpUse");
+
+        HPText.text = "Level: " + statHp + "\nHP: " + stat[0][statHp];
     }
 
     public void HpUp()
     {
         if (statHp < 10)
         statHp++;
+        HPText.text = "Level: "+ statHp + "\nHP: " + stat[0][statHp];
+        PlayerPrefs.SetInt("statHP", statHp);
+
         Debug.Log(statHp);
     }
     public void AtkUp()
