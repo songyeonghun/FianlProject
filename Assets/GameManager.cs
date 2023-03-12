@@ -4,18 +4,14 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    void Start()
+    static public int StatCoin=0;
+
+    private void Start()
     {
-        GameLoad();
+        PlayerPrefs.SetInt("StatCoin", StatCoin);
     }
 
-        static public void GameSave()
-        {
-            PlayerPrefs.SetInt("StatHP", PlayerHP.StatHp);
-        }
 
-        public void GameLoad()
-        {
-            PlayerHP.StatHp = PlayerPrefs.GetInt("StatHP");
-        }
-    }
+
+
+}

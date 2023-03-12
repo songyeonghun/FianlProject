@@ -4,14 +4,22 @@ using UnityEngine;
 using UnityEngine.UI;
 public class PlayerState : MonoBehaviour
 {
+    //ÀúÀåÇÒ ½ºÅÈ
     static public int statHp;
     static public int statAtk;
     static public int statMoveSpeed;
     static public int statAtkSpeed;
     static public int statHpUse;
-    static public float StatHpRegen;
+    static public int StatHpRegen;
 
+    //½ºÅÈÃâ·Â
     public Text HPText;
+    public Text AtkText;
+    public Text MoveSpeedText;
+    public Text AtkSpeedText;
+    public Text HPUseText;
+    public Text HPRegenText;
+
 
     //½ºÅÈÇ¥
     public int[][] stat = new int[6][]
@@ -26,22 +34,33 @@ public class PlayerState : MonoBehaviour
 
     void Start()
     {
+        //ÀúÀåÇÑ ½ºÅÈÀ» ºÒ·¯¿À±â
         statHp = PlayerPrefs.GetInt("statHP");
         statAtk = PlayerPrefs.GetInt("statAtk");
         statMoveSpeed = PlayerPrefs.GetInt("statMoveSpeed");
         statAtkSpeed = PlayerPrefs.GetInt("statAtkSpeed");
-        StatHpRegen = PlayerPrefs.GetInt("StatHpRegen");
         statHpUse = PlayerPrefs.GetInt("statHpUse");
+        StatHpRegen = PlayerPrefs.GetInt("StatHpRegen");
 
+
+        //½ºÅÈÃ¢¿¡ ·¡¹ë°ú ½ºÅÈ Ç¥½Ã
         HPText.text = "Level: " + statHp + "\nHP: " + stat[0][statHp];
+        AtkText.text = "Level: " + statAtk + "\nATK: " + stat[1][statAtk];
+        MoveSpeedText.text = "Level: " + statMoveSpeed + "\nMoveSpeed: " + stat[2][statMoveSpeed];
+        AtkSpeedText.text = "Level: " + statAtkSpeed + "\nAtkSpeed: " + stat[3][statAtkSpeed];
+        HPUseText.text = "Level: " + statHpUse + "\nHpUse: " + stat[4][statHpUse];
+        HPRegenText.text = "Level: " + StatHpRegen + "\nHpRegen: " + stat[5][StatHpRegen];
+
     }
 
+
+    //½ºÅÈ¾÷
     public void HpUp()
     {
         if (statHp < 10)
         statHp++;
         HPText.text = "Level: "+ statHp + "\nHP: " + stat[0][statHp];
-        PlayerPrefs.SetInt("statHP", statHp);
+        PlayerPrefs.SetInt("statHp", statHp);
 
         Debug.Log(statHp);
     }
@@ -49,25 +68,46 @@ public class PlayerState : MonoBehaviour
     {
         if (statAtk < 5)
             statAtk++;
+        AtkText.text = "Level: " + statAtk + "\nATK: " + stat[1][statAtk];
+        PlayerPrefs.SetInt("statAtk", statAtk);
+
+        Debug.Log(statAtk);
     }
     public void MoveSpeedUp()
     {
-        if(statMoveSpeed<3)
+        if(statMoveSpeed<2)
         statMoveSpeed++;
+        MoveSpeedText.text = "Level: " + statMoveSpeed + "\nMoveSpeed: " + stat[2][statMoveSpeed];
+        PlayerPrefs.SetInt("statMoveSpeed", statMoveSpeed);
+
+        Debug.Log(statMoveSpeed);
     }
     public void AtkSpeedUp()
     {
         if(statAtkSpeed<5)
         statAtkSpeed++;
+        AtkSpeedText.text = "Level: " + statAtkSpeed + "\nAtkSpeed: " + stat[3][statAtkSpeed];
+        PlayerPrefs.SetInt("statAtkSpeed", statAtkSpeed);
+
+        Debug.Log(statAtkSpeed);
+    }
+    public void HpUseUp()
+    {
+        if (statHpUse < 1)
+            statHpUse++;
+        HPUseText.text = "Level: " + statHpUse + "\nHpUse: " + stat[4][statHpUse];
+        PlayerPrefs.SetInt("statHpUse", statHpUse);
+
+        Debug.Log(statHpUse);
     }
     public void HpRegenUp()
     {
         if(StatHpRegen<2)
         StatHpRegen++;
+        HPRegenText.text = "Level: " + StatHpRegen + "\nHpRegen: " + stat[5][StatHpRegen];
+        PlayerPrefs.SetInt("StatHpRegen", StatHpRegen);
+
+        Debug.Log(StatHpRegen);
     }
-    public void HpUseUp()
-    {
-        if(statHpUse<3)
-        statHpUse++;
-    }
+
 }
