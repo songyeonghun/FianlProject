@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1166224498}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,8 @@ GameObject:
   - component: {fileID: 7918047840732323776}
   - component: {fileID: 717644819655351856}
   - component: {fileID: 5789159686136752728}
-  m_Layer: 0
+  - component: {fileID: 2024949213}
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +158,6 @@ MonoBehaviour:
   dashSpeed: 0
   dashTime: 0.2
   dashCoolTime: 0.5
-  atkCoolTime: 0
   hpBar: {fileID: 0}
   rb: {fileID: 0}
   cam: {fileID: 0}
@@ -192,6 +192,26 @@ MonoBehaviour:
   firepoint: {fileID: 1166224498}
   bulletPrefab: {fileID: 5354973741288540284, guid: af48462da91a6e24fb4212dfe8b25a47, type: 3}
   bulletForce: 20
+--- !u!95 &2024949213
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675395110654467867}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f0ca1f604ff92e54e89f7d4cf1a1b142, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &2488116121286056266
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,7 +222,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4610866811889911496}
   - component: {fileID: 1273238870943493576}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

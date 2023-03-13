@@ -10,7 +10,7 @@ public class Shooting : MonoBehaviour
     public float bulletForce = 20f;
 
     bool atkCool=false;
-    float atkCooltime = 0.5f;
+    float pistolCool = 0.5f;
 
     void Update()
     {
@@ -29,15 +29,11 @@ public class Shooting : MonoBehaviour
         atkCool = true;
         StartCoroutine("atkCoolTime");
 
-        //저장 테스트
-        PlayerHP.StatHp++;
-        Debug.Log(PlayerHP.StatHp);
-        GameManager.GameSave();
     }
 
     private IEnumerator atkCoolTime()
     {
-        yield return new WaitForSeconds(atkCooltime);
+        yield return new WaitForSeconds(pistolCool);
         atkCool = false;
     }
 

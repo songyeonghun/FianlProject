@@ -60,15 +60,14 @@
     <Compile Include="Assets\Shooting.cs" />
     <Compile Include="Assets\deletBtn.cs" />
     <Compile Include="Assets\prefebs\X\testBullet.cs" />
-    <Compile Include="Assets\Script\SaveLoad\SaveBtn.cs" />
     <Compile Include="Assets\prefebs\X\testPlayerControl.cs" />
     <Compile Include="Assets\Bulllet.cs" />
-    <Compile Include="Assets\GameManager.cs" />
+    <Compile Include="Assets\Script\GameManager.cs" />
     <Compile Include="Assets\PlayerHP.cs" />
     <Compile Include="Assets\CameraMove.cs" />
     <Compile Include="Assets\StartBtn.cs" />
-    <Compile Include="Assets\PlayerState.cs" />
-    <Compile Include="Assets\PlayerControler.cs" />
+    <Compile Include="Assets\Script\PlayerState.cs" />
+    <Compile Include="Assets\PlayerController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

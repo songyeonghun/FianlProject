@@ -15,11 +15,6 @@ public class Bulllet : MonoBehaviour
         rb.velocity = transform.right * 20;
     }
 
-    void Update()
-    {
-
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(gameObject);
