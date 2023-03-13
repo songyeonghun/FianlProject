@@ -63,7 +63,7 @@
     <Compile Include="Assets\prefebs\X\testPlayerControl.cs" />
     <Compile Include="Assets\Bulllet.cs" />
     <Compile Include="Assets\Script\GameManager.cs" />
-    <Compile Include="Assets\PlayerHP.cs" />
+    <Compile Include="Assets\Player.cs" />
     <Compile Include="Assets\CameraMove.cs" />
     <Compile Include="Assets\StartBtn.cs" />
     <Compile Include="Assets\Script\PlayerState.cs" />
