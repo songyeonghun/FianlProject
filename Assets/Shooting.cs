@@ -26,13 +26,15 @@ public class Shooting : MonoBehaviour
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firepoint.right * bulletForce, ForceMode2D.Impulse);
 
-        atkCool = true;
+
         StartCoroutine("atkCoolTime");
 
     }
 
+    //공격에 쿨타임을 주기
     private IEnumerator atkCoolTime()
     {
+        atkCool = true;
         yield return new WaitForSeconds(pistolCool);
         atkCool = false;
     }

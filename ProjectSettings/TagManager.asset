@@ -5,10 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Wall
-  - bullet
   - StatCoin
   - Key
   - Chest
+  - Bullet
   layers:
   - Default
   - TransparentFX

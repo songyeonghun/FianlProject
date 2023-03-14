@@ -11,23 +11,34 @@ public class Player : MonoBehaviour
 
     //플레이어의 소지 열쇠
     int key=0;
+
+
     void Update()
     {
         hpbar.value = currentHp / maxHp;
+
+        
     }
+
+    private void FixedUpdate()
+    {
+
+    }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //열쇠와 접촉시 열쇠는 사라지고 열쇠 소지갯수 1증가
         if (collision.gameObject.tag == "Key")
         {
             key++;
-            Debug.Log(key);
+            Destroy(collision.gameObject);
         }
+        //스탯코인과 접촉시 스탯코인은 사라지고 스탯코인 소지갯수 1증가
         else if (collision.gameObject.tag == "StatCoin")
         {
             GameManager.StatCoin++;
-
-            Debug.Log(GameManager.StatCoin);
+            Destroy(collision.gameObject);
         }
     }
 

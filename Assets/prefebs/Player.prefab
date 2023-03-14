@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 2024949213}
   m_Layer: 3
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,14 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91e7765eaccc75640aa97209e35bcd7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 100
-  HP: 0
-  moveSpeed: 5
-  dashSpeed: 0
-  dashTime: 0.2
-  dashCoolTime: 0.5
-  hpBar: {fileID: 0}
-  rb: {fileID: 0}
+  rb: {fileID: 675395110654467847}
   cam: {fileID: 0}
 --- !u!58 &717644819655351856
 CircleCollider2D:

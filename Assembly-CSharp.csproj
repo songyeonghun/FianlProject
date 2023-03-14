@@ -58,7 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\MapGenerator.cs" />
     <Compile Include="Assets\Shooting.cs" />
-    <Compile Include="Assets\deletBtn.cs" />
+    <Compile Include="Assets\StatUiBtn.cs" />
     <Compile Include="Assets\prefebs\X\testBullet.cs" />
     <Compile Include="Assets\prefebs\X\testPlayerControl.cs" />
     <Compile Include="Assets\Bulllet.cs" />
@@ -68,6 +68,7 @@
     <Compile Include="Assets\StartBtn.cs" />
     <Compile Include="Assets\Script\PlayerState.cs" />
     <Compile Include="Assets\PlayerController.cs" />
+    <Compile Include="Assets\StatNpc.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
