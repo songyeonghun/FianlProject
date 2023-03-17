@@ -61,6 +61,7 @@ public class PlayerState : MonoBehaviour
         statHp++;
         HPText.text = "Level: "+ statHp + "\nHP: " + stat[0][statHp];
         PlayerPrefs.SetInt("statHp", statHp);
+        GameManager.StatCoin -= 100;
 
         Debug.Log(statHp);
     }
@@ -70,6 +71,7 @@ public class PlayerState : MonoBehaviour
             statAtk++;
         AtkText.text = "Level: " + statAtk + "\nATK: " + stat[1][statAtk];
         PlayerPrefs.SetInt("statAtk", statAtk);
+        GameManager.StatCoin -= 300;
 
         Debug.Log(statAtk);
     }
@@ -79,6 +81,7 @@ public class PlayerState : MonoBehaviour
         statMoveSpeed++;
         MoveSpeedText.text = "Level: " + statMoveSpeed + "\nMoveSpeed: " + stat[2][statMoveSpeed];
         PlayerPrefs.SetInt("statMoveSpeed", statMoveSpeed);
+        GameManager.StatCoin -= 500;
 
         Debug.Log(statMoveSpeed);
     }
@@ -88,6 +91,7 @@ public class PlayerState : MonoBehaviour
         statAtkSpeed++;
         AtkSpeedText.text = "Level: " + statAtkSpeed + "\nAtkSpeed: " + stat[3][statAtkSpeed];
         PlayerPrefs.SetInt("statAtkSpeed", statAtkSpeed);
+        GameManager.StatCoin -= 300;
 
         Debug.Log(statAtkSpeed);
     }
@@ -97,6 +101,7 @@ public class PlayerState : MonoBehaviour
             statHpUse++;
         HPUseText.text = "Level: " + statHpUse + "\nHpUse: " + stat[4][statHpUse];
         PlayerPrefs.SetInt("statHpUse", statHpUse);
+        GameManager.StatCoin -= 3000;
 
         Debug.Log(statHpUse);
     }
@@ -106,6 +111,7 @@ public class PlayerState : MonoBehaviour
         StatHpRegen++;
         HPRegenText.text = "Level: " + StatHpRegen + "\nHpRegen: " + stat[5][StatHpRegen]+"%";
         PlayerPrefs.SetInt("StatHpRegen", StatHpRegen);
+        GameManager.StatCoin -= 1000;
 
         Debug.Log(StatHpRegen);
     }

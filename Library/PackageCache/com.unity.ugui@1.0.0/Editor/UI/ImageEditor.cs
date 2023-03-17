@@ -35,6 +35,7 @@ namespace UnityEditor.UI
         AnimBool m_ShowTiled;
         AnimBool m_ShowFilled;
         AnimBool m_ShowType;
+        bool m_bIsDriven;
 
         private class Styles
         {
@@ -110,6 +111,8 @@ namespace UnityEditor.UI
             m_ShowFilled.valueChanged.AddListener(Repaint);
 
             SetShowNativeSize(true);
+
+            m_bIsDriven = false;
         }
 
         protected override void OnDisable()
@@ -124,6 +127,10 @@ namespace UnityEditor.UI
         public override void OnInspectorGUI()
         {
             serializedObject.Update();
+
+            Image image = target as Image;
+            RectTransform rect = image.GetComponent<RectTransform>();
+            m_bIsDriven = (rect.drivenByObject as Slider)?.fillRect == rect;
 
             SpriteGUI();
             AppearanceControlsGUI();
@@ -225,7 +232,7 @@ namespace UnityEditor.UI
 
                 if (EditorGUILayout.BeginFadeGroup(m_ShowTiled.faded))
                 {
-                    if (image.sprite != null && !image.hasBorder && (image.sprite.texture != null && image.sprite.texture.wrapMode != TextureWrapMode.Repeat || image.sprite.packed))
+                    if (image.sprite != null && !image.hasBorder && (image.sprite.texture.wrapMode != TextureWrapMode.Repeat || image.sprite.packed))
                         EditorGUILayout.HelpBox("It looks like you want to tile a sprite with no border. It would be more efficient to modify the Sprite properties, clear the Packing tag and set the Wrap mode to Repeat.", MessageType.Warning);
                 }
                 EditorGUILayout.EndFadeGroup();
@@ -257,7 +264,14 @@ namespace UnityEditor.UI
                             EditorGUI.Popup(shapeRect, m_FillOrigin, Styles.Origin360Style, Styles.text);
                             break;
                     }
-                    EditorGUILayout.PropertyField(m_FillAmount);
+
+                    if (m_bIsDriven)
+                        EditorGUILayout.HelpBox("The Fill amount property is driven by Slider.", MessageType.None);
+                    using (new EditorGUI.DisabledScope(m_bIsDriven))
+                    {
+                        EditorGUILayout.PropertyField(m_FillAmount);
+                    }
+
                     if ((Image.FillMethod)m_FillMethod.enumValueIndex > Image.FillMethod.Vertical)
                     {
                         EditorGUILayout.PropertyField(m_FillClockwise, m_ClockwiseContent);
