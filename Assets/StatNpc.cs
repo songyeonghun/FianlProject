@@ -12,6 +12,8 @@ public class StatNpc : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E)&& Player==true)
         {
             StatUi.SetActive(true);
+            Time.timeScale = 0;
+            Shooting.atkCool = true;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

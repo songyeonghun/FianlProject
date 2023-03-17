@@ -69,6 +69,8 @@
     <Compile Include="Assets\StartBtn.cs" />
     <Compile Include="Assets\Script\PlayerState.cs" />
     <Compile Include="Assets\PlayerController.cs" />
+    <Compile Include="Assets\PoTop.cs" />
+    <Compile Include="Assets\Emp.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

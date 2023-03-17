@@ -13,5 +13,7 @@ public class StatUiBtn : MonoBehaviour
     public void Close()
     {
         StateUi.SetActive(false);
+        Time.timeScale = 1;
+        Shooting.atkCool = false;
     }
 }

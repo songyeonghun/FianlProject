@@ -10,21 +10,12 @@ public class Player : MonoBehaviour
     public float currentHp;
 
     //플레이어의 소지 열쇠
-    int key=0;
-
+    int key = 0;
 
     void Update()
     {
-        hpbar.value = currentHp / maxHp;
-
-        
+        hpbar.value = currentHp / maxHp;   
     }
-
-    private void FixedUpdate()
-    {
-
-    }
-
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -37,8 +28,9 @@ public class Player : MonoBehaviour
         //스탯코인과 접촉시 스탯코인은 사라지고 스탯코인 소지갯수 1증가
         else if (collision.gameObject.tag == "StatCoin")
         {
-            GameManager.StatCoin+=500;
+            GameManager.StatCoin += 500;
             Destroy(collision.gameObject);
+
         }
     }
 

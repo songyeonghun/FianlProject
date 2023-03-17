@@ -9,7 +9,7 @@ public class Shooting : MonoBehaviour
 
     public float bulletForce = 20f;
 
-    bool atkCool=false;
+    static public bool atkCool=false;
     float pistolCool = 0.5f;
 
     void Update()

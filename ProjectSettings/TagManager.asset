@@ -9,6 +9,8 @@ TagManager:
   - Key
   - Chest
   - Bullet
+  - emp
+  - enemyBullet
   layers:
   - Default
   - TransparentFX
@@ -17,8 +19,8 @@ TagManager:
   - Water
   - UI
   - bullet
-  - 
-  - 
+  - emp
+  - enemyBullet
   - 
   - 
   - 

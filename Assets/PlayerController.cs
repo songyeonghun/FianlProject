@@ -7,6 +7,11 @@ public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb;
 
+    //emp
+    public
+        GameObject emp;
+
+
     //플레이어 스탯
     int Hp;
     int MaxHp;
@@ -34,6 +39,10 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1)&& canDash==true)
            StartCoroutine(Dash());
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(emp, gameObject.transform.position, Quaternion.identity);
+        }
 
     }
     void FixedUpdate()
@@ -60,6 +69,9 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(dashCoolTime);
         canDash = true;
     }
+
+
+
 
     /*
     SpriteRenderer spriteRenderer;
