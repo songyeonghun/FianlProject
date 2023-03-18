@@ -53,7 +53,7 @@
     <UnityVersion>2021.1.7f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\StatNpc.cs" />
@@ -66,11 +66,11 @@
     <Compile Include="Assets\Script\GameManager.cs" />
     <Compile Include="Assets\Player.cs" />
     <Compile Include="Assets\CameraMove.cs" />
+    <Compile Include="Assets\PoTop.cs" />
+    <Compile Include="Assets\Emp.cs" />
     <Compile Include="Assets\StartBtn.cs" />
     <Compile Include="Assets\Script\PlayerState.cs" />
     <Compile Include="Assets\PlayerController.cs" />
-    <Compile Include="Assets\PoTop.cs" />
-    <Compile Include="Assets\Emp.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
